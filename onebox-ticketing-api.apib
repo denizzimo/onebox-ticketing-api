@@ -516,36 +516,35 @@ If the allocation (seat_id) is not known, the system will automatically allocate
         {
           "events":[
             {
-              "id": "4345",
-              "event_date_id": "2",
-              "tickets":[
-                {
-                  "seat_id": "454",
-                  "is_numbered": true,
-                  "price_level_id": "4345",
-                  "buyer":{
-                    "personal_id": "455444300E",
-                    "partner_id": "3453",
-                    "partner_pass": "1234"
-                  }
-                },
-                {
-                  "is_numbered": false,
-                  "price_level_id": "4345",
-                  "buyer":{
-                    "personal_id": "455444300E",
-                    "partner_id": "3453",
-                    "partner_pass": "1234"
-                },
-                {
-                  "is_numbered": false,
-                  "price_level_id": "4345",
-                  "buyer":{
-                    "personal_id": "455444300E",
-                    "partner_id": "3453",
-                    "partner_pass": "1234"
-                }
-              ]
+                "id": "4345",
+                "event_date_id": "2",
+                "tickets":[
+                    {
+                        "seat_id": "454",
+                        "is_numbered": true,
+                        "price_level_id": "4345"
+                    },
+                    {
+                        "is_numbered": false,
+                        "price_level_id": "4345"
+                    },
+                    {
+                        "is_numbered": false,
+                        "price_level_id": "4345"
+                    }
+                ],
+                "buyers": [
+                    {
+                        "person_id": "12345",
+                        "partner_id": "8877",
+                        "partner_pass": "0000"
+                    },
+                    {
+                        "person_id": "12346",
+                        "partner_id": "8878",
+                        "partner_pass": "0000"
+                    }
+                ]
             }
           ],
           "status": "PREORDER"
@@ -576,9 +575,9 @@ If the allocation (seat_id) is not known, the system will automatically allocate
                       "block": "1",
                       "sector": "",
                       "buyer":{
-                        "personal_id": "455444300E",
-                        "partner_id": "3453",
-                        "partner_pass": "1234"
+                          "person_id": "12345",
+                          "partner_id": "8877",
+                          "partner_pass": "0000"
                       }
                     },
                     {
@@ -594,9 +593,9 @@ If the allocation (seat_id) is not known, the system will automatically allocate
                       "block": "1",
                       "sector": "",
                       "buyer":{
-                        "personal_id": "455444300E",
-                        "partner_id": "3453",
-                        "partner_pass": "1234"
+                          "person_id": "12345",
+                          "partner_id": "8877",
+                          "partner_pass": "0000"
                       }
                     },
                     {
@@ -612,10 +611,22 @@ If the allocation (seat_id) is not known, the system will automatically allocate
                       "block": "1",
                       "sector": "",
                       "buyer":{
-                        "personal_id": "455444300E",
-                        "partner_id": "3453",
-                        "partner_pass": "1234"
+                          "person_id": "12346",
+                          "partner_id": "8878",
+                          "partner_pass": "0000"
                       }
+                    }
+                ],
+                "buyers": [
+                    {
+                        "person_id": "12345",
+                        "partner_id": "8877",
+                        "partner_pass": "0000"
+                    },
+                    {
+                        "person_id": "12346",
+                        "partner_id": "8878",
+                        "partner_pass": "0000"
                     }
                 ]
               }
@@ -677,12 +688,7 @@ This will partially update an order resource, the user are entitled to set the n
                       "entrance": "",
                       "gate": "1",
                       "block": "1",
-                      "sector": "",
-                      "buyer":{
-                        "personal_id": "455444300E",
-                        "partner_id": "3453",
-                        "partner_pass": "1234"
-                      }
+                      "sector": ""
                     },
                     {
                       "id": "125",
@@ -695,12 +701,19 @@ This will partially update an order resource, the user are entitled to set the n
                       "entrance": "",
                       "gate": "1",
                       "block": "1",
-                      "sector": "",
-                      "buyer":{
-                        "personal_id": "455444300E",
-                        "partner_id": "3453",
-                        "partner_pass": "1234"
-                      }
+                      "sector": ""
+                    }
+                ],
+                "buyers": [
+                    {
+                        "person_id": "12345",
+                        "partner_id": "8877",
+                        "partner_pass": "0000"
+                    },
+                    {
+                        "person_id": "12346",
+                        "partner_id": "8878",
+                        "partner_pass": "0000"
                     }
                 ]
               }
@@ -740,9 +753,9 @@ This will partially update an order resource, the user are entitled to set the n
                     "block": "1",
                     "sector": "",
                     "buyer":{
-                      "personal_id": "455444300E",
-                      "partner_id": "3453",
-                      "partner_pass": "1234"
+                      "personal_id": "12345",
+                      "partner_id": "8877",
+                      "partner_pass": "0000"
                     }
                   },
                   {
@@ -758,11 +771,23 @@ This will partially update an order resource, the user are entitled to set the n
                     "block": "1",
                     "sector": "",
                     "buyer":{
-                      "personal_id": "455444300E",
-                      "partner_id": "3453",
-                      "partner_pass": "1234"
+                      "personal_id": "12346",
+                      "partner_id": "8878",
+                      "partner_pass": "0000"
                     }
                   }
+                ],
+                "buyers": [
+                    {
+                        "person_id": "12345",
+                        "partner_id": "8877",
+                        "partner_pass": "0000"
+                    },
+                    {
+                        "person_id": "12346",
+                        "partner_id": "8878",
+                        "partner_pass": "0000"
+                    }
                 ]
               }
             ],
@@ -812,12 +837,7 @@ This will manage the seating selection for a given already created order.
                 "entrance": "",
                 "gate": "1",
                 "block": "1",
-                "sector": "",
-                "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
-                }
+                "sector": ""
               },
               {
                 "id": "125",
@@ -830,13 +850,20 @@ This will manage the seating selection for a given already created order.
                 "entrance": "",
                 "gate": "1",
                 "block": "1",
-                "sector": "",
-                "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
-                }
+                "sector": ""
               }
+            ],
+            "buyers": [
+                {
+                    "person_id": "12345",
+                    "partner_id": "8877",
+                    "partner_pass": "0000"
+                },
+                {
+                    "person_id": "12346",
+                    "partner_id": "8878",
+                    "partner_pass": "0000"
+                }
             ]
         }
 
@@ -859,9 +886,9 @@ This will manage the seating selection for a given already created order.
                 "block": "1",
                 "sector": "",
                 "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
+                  "personal_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
                 }
               },
               {
@@ -879,10 +906,22 @@ This will manage the seating selection for a given already created order.
                 "block": "1",
                 "sector": "",
                 "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
+                  "personal_id": "12346",
+                  "partner_id": "8878",
+                  "partner_pass": "0000"
                 }
+              }
+          ],
+          "buyers": [
+              {
+                  "person_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
+              },
+              {
+                  "person_id": "12346",
+                  "partner_id": "8878",
+                  "partner_pass": "0000"
               }
           ]
         }
@@ -920,12 +959,19 @@ This will manage the seating selection for a given already created order.
                 "entrance": "",
                 "gate": "",
                 "block": "",
-                "sector": "",
-                "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
-                }
+                "sector": ""
+            }
+          ],
+          "buyers": [
+              {
+                  "person_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
+              },
+              {
+                  "person_id": "12346",
+                  "partner_id": "8878",
+                  "partner_pass": "0000"
               }
           ]
         }
@@ -947,9 +993,9 @@ This will manage the seating selection for a given already created order.
                 "block": "1",
                 "sector": "",
                 "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
+                  "personal_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
                 }
               },
               {
@@ -967,9 +1013,9 @@ This will manage the seating selection for a given already created order.
                 "block": "1",
                 "sector": "",
                 "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
+                  "personal_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
                 }
               },
               {
@@ -985,10 +1031,22 @@ This will manage the seating selection for a given already created order.
                 "block": "",
                 "sector": "",
                 "buyer":{
-                  "personal_id": "455444300E",
-                  "partner_id": "3453",
-                  "partner_pass": "1234"
+                  "personal_id": "12346",
+                  "partner_id": "8878",
+                  "partner_pass": "0000"
                 }
+              }
+          ],
+          "buyers": [
+              {
+                  "person_id": "12345",
+                  "partner_id": "8877",
+                  "partner_pass": "0000"
+              },
+              {
+                  "person_id": "12346",
+                  "partner_id": "8878",
+                  "partner_pass": "0000"
               }
           ]
         }

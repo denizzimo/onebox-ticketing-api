@@ -40,6 +40,11 @@ Once you have a token you can use it in all API calls as shown below.
 + Response 201 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/oauth/token",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "access_token": "[OAUTH2_TOKEN]",
           "token_type":"bearer",
           "expires_in":7200,
@@ -49,6 +54,11 @@ Once you have a token you can use it in all API calls as shown below.
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/oauth/token",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -56,6 +66,11 @@ Once you have a token you can use it in all API calls as shown below.
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/oauth/token",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -105,7 +120,7 @@ Collection of events and its session dates.
 
         {
             "version": "1.0",
-            "href": "http://www.oneboxtm.com/ticketing-api/1.0/events/",
+            "href": "http://www.oneboxtm.com/ticketing-api/1.0/events",
             "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
             "request_date": "2015-08-05T08:40:51.620Z",
             "parameters":
@@ -192,6 +207,15 @@ Collection of events and its session dates.
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/events",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -199,6 +223,15 @@ Collection of events and its session dates.
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/events",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -293,6 +326,15 @@ See below the description of the response fields we consider that need to be exp
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/event_dates",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -300,6 +342,15 @@ See below the description of the response fields we consider that need to be exp
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/event_dates",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -372,6 +423,15 @@ Retrieve a detailed zone map with the availability of each seat from that zone, 
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/price_levels",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -379,6 +439,15 @@ Retrieve a detailed zone map with the availability of each seat from that zone, 
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/price_levels",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -430,6 +499,15 @@ Retrieve a detailed seating availability for the given price level zone.
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/seats",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters":
+          {
+            "page": 2,
+            "page_size": 20
+          },
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -494,6 +572,11 @@ Retrieve the static data needed for mapping and quering purposes. You will be ab
 + Response 400 (application/vnd.collection+json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/seats",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -501,6 +584,11 @@ Retrieve the static data needed for mapping and quering purposes. You will be ab
 + Response 401 (application/vnd.collection+json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/seats",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -628,6 +716,11 @@ If the allocation (seat_id) is not known, the system will automatically allocate
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -635,6 +728,11 @@ If the allocation (seat_id) is not known, the system will automatically allocate
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -763,6 +861,11 @@ This will partially update an order resource, the user are entitled to set the n
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -770,6 +873,11 @@ This will partially update an order resource, the user are entitled to set the n
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
@@ -1044,6 +1152,11 @@ This will delete the given seat from an already created order.
 + Response 400 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "Bad request",
           "error_description": "There was a syntax error, check your params request and try it again."
         }
@@ -1051,6 +1164,11 @@ This will delete the given seat from an already created order.
 + Response 401 (application/json)
 
         {
+          "version": "1.0",
+          "href": "http://www.oneboxtm.com/ticketing-api/1.0/orders/1",
+          "trace_id": "94abc26e-173a-4ab2-a71b-863aed20f656",
+          "request_date": "2015-08-05T08:40:51.620Z",
+          "parameters": {},
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }

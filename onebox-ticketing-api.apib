@@ -886,6 +886,30 @@ This will partially update an order resource, the user are entitled to set the n
           "error_description": "Full authentication is required to access this resource"
         }
 
+
+### Delete a order [DELETE]
+
+This will delete a order resource, order with {id} is not confirmed now.
+
++ Response 200 (application/json)
+
++ Response 400 (application/json)
+
+        {
+          "error": "Bad request",
+          "error_description": "There was a syntax error, check your params request and try it again."
+        }
+
++ Response 401 (application/json)
+
+        {
+          "error": "unauthorized",
+          "error_description": "Full authentication is required to access this resource"
+        }
+
+		
+		
+
 ## Tickets seat operations [/orders/{order_id}/tickets/{id}]
 
 ### Update the entire seats list [PUT]

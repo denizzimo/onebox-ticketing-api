@@ -507,6 +507,8 @@ Retrieve the static data needed for mapping and quering purposes. You will be ab
 
 ## Orders operations [/orders/{id}]
 
+
+
 ### Create a new order [POST]
 
 This will create a new order resource, the user are entitled to set the number of wished seats by a given price_zone, to set detailed allocation if venue configuration allow you, to set the buyer personal details and delivery method. And overall, a client will be able to perform it directly (direct confirm) or in two steps (first lock the seats -default- getting a temporal token, then confirm the seats if already paid receving the final locator). Possible statues available are:
@@ -777,6 +779,28 @@ This will partially update an order resource, the user are entitled to set the n
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
+
+### Delete a order [DELETE]
+
+This will delete a order resource, order with {id} is not confirmed now.
+
++ Response 200 (application/json)
+
++ Response 400 (application/json)
+
+        {
+          "error": "Bad request",
+          "error_description": "There was a syntax error, check your params request and try it again."
+        }
+
++ Response 401 (application/json)
+
+        {
+          "error": "unauthorized",
+          "error_description": "Full authentication is required to access this resource"
+        }
+
+
 
 ## Tickets seat operations [/orders/{order_id}/tickets/{id}]
 

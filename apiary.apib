@@ -92,7 +92,7 @@ Collection of events and its session dates.
     + city_id (optional, string) ... Filter by a given city id.
     + latitude (optional, number) ... It needs a longitude and radius params to search arround a GPS location.
     + longitude (optional, number) ... It needs a latitude and radius params to search arround a GPS location.
-    + radius (optional, number) ... Filter by a radius applied arround a GPS location.
+    + radius (optional, number) ... Filter by a radius applied arround a GPS location.     
     + is_seats_available (optional, enum[boolean])
       Filter whether is any seat available to book or not:
         + Members
@@ -312,8 +312,8 @@ Retrieve a detailed zone map with the availability of each seat from that zone, 
 + Parameters
 
     + event_id (required, string) ... Filter by the given event id.
-    + event_date_id (required, string) ... Filter by the given event date id.
-    + id (required, string) ... Update a given price id
+    + event_date_id (optional, string) ... Filter by the given event date id.
+    + id (optional, string) ... Update a given price id
 
 + Request
 
@@ -366,6 +366,27 @@ Retrieve a detailed zone map with the availability of each seat from that zone, 
                 ]
               }
             ],
+        "price_levels_relations": [{
+            "price_level_id": "454",
+            "graphic_containers": [{
+                "container_id": 1
+            }, {
+                "container_id": 3
+            }, {
+                "container_id": 5
+            }]
+        }, {
+            "price_level_id": "455",
+            "graphic_containers": [{
+                "container_id": 2
+            }, {
+                "container_id": 4
+            }, {
+                "container_id": 6
+            }]
+        }
+
+    ],
             "links": []
         }
 
@@ -507,8 +528,6 @@ Retrieve the static data needed for mapping and quering purposes. You will be ab
 
 ## Orders operations [/orders/{id}]
 
-
-
 ### Create a new order [POST]
 
 This will create a new order resource, the user are entitled to set the number of wished seats by a given price_zone, to set detailed allocation if venue configuration allow you, to set the buyer personal details and delivery method. And overall, a client will be able to perform it directly (direct confirm) or in two steps (first lock the seats -default- getting a temporal token, then confirm the seats if already paid receving the final locator). Possible statues available are:
@@ -548,7 +567,6 @@ If the allocation (seat_id) is not known, the system will automatically allocate
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -604,7 +622,6 @@ If the allocation (seat_id) is not known, the system will automatically allocate
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -685,7 +702,6 @@ This will partially update an order resource, the user are entitled to set the n
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -741,7 +757,6 @@ This will partially update an order resource, the user are entitled to set the n
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -779,28 +794,6 @@ This will partially update an order resource, the user are entitled to set the n
           "error": "unauthorized",
           "error_description": "Full authentication is required to access this resource"
         }
-
-### Delete an order [DELETE]
-
-This will delete an order resource, identifyed by {id}, which is not already confirmed.
-
-+ Response 200 (application/json)
-
-+ Response 400 (application/json)
-
-        {
-          "error": "Bad request",
-          "error_description": "There was a syntax error, check your params request and try it again."
-        }
-
-+ Response 401 (application/json)
-
-        {
-          "error": "unauthorized",
-          "error_description": "Full authentication is required to access this resource"
-        }
-
-
 
 ## Tickets seat operations [/orders/{order_id}/tickets/{id}]
 
@@ -839,7 +832,6 @@ This will manage the seating selection for a given already created order.
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -895,7 +887,6 @@ This will manage the seating selection for a given already created order.
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -969,7 +960,6 @@ This will manage the seating selection for a given already created order.
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
@@ -1025,7 +1015,6 @@ This will manage the seating selection for a given already created order.
                                 "seat": 3,
                                 "seat_name": "3A",
                                 "entrance": "",
-								"access": "",
                                 "gate": "1",
                                 "block": "1",
                                 "sector": "",
